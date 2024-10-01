@@ -9,4 +9,11 @@ describe("Button Component Rendering", () => {
         const buttonElement = screen.getByText(/Test/i);
         expect(buttonElement).toBeInTheDocument();
     });
+    test("onclick event", () => {
+        const onClick = jest.fn();
+        render(<Button onClick={onClick}>Test</Button>);
+        const buttonElement = screen.getByText(/Test/i);
+        buttonElement.click();
+        expect(onClick).toHaveBeenCalled();
+    });
 });

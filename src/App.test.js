@@ -1,12 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
-import React from 'react';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import React from "react";
 
 // A test suite in Jest is defined using the describe function. It groups related test cases together, making it easier to organize and manage tests.
-describe('App Component Rendering', () => {
+describe("App Component Rendering", () => {
     // This is part of Jest's syntax for defining a test.
     // A test case is defined using the test (or it) function within a test suite. Each test case contains specific logic to verify a particular aspect of the code.
-    test('renders learn react link', () => {
+    test("renders learn react link", () => {
         // The render function from RTL is used to render the <App /> component into a virtual DOM for testing.
         // This function returns an object that contains utility methods for querying the rendered output.
         render(<App />);
@@ -20,4 +20,4 @@ describe('App Component Rendering', () => {
         // assertion in german "Erwartung/Behauptung"
         expect(linkElement).toBeInTheDocument();
     });
-})
+});
